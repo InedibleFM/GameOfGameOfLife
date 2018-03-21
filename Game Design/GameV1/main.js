@@ -7,8 +7,8 @@ let fraemraet = 0;
 let newframe = false;
 
 //Size of grid
-let gridWidth = 850*4;
-let gridHeight = 650*4;
+let gridWidth = 850;
+let gridHeight = 650;
 
 //Size of each block
 let blockSize = 16;
