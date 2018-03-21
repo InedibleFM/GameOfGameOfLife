@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
+<title>Game of Game of Life</title>
+
+<link rel="stylesheet" type="text/css" href="divlayout.css">
+<link rel="stylesheet" type="text/css" href="buttons.css">
+<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+<script src="p5.min.js"></script>
+<script src="addons/p5.dom.min.js"></script>
+<script src="addons/p5.dom.js"></script>
+<script src="addons/p5.sound.min.js"></script>
+<script src="bottombar.js"></script>
+<script src="store.js"></script>
+<script src="menu.js"></script>
+<script src="startscreenwindow.js"></script>
+<script src="console.js"></script>
+<script src="achievements.js"></script>
+<script src="main.js"></script>
+
+
+<!-- container full game -->
+<div id="container">
+  <div id="store">
+    <img id="storeMenuOverlayBorder" src="images/storeborder.png" />
+    <p id="bCellText">0 bCells</p>
+    <p id="mutliplierText">Multiplier: 1</p>
+    <ul>
+      <li id="ActualSwitch_store"><a onclick="switchToStore()">STORE</a></li>
+      <li id="ActualSwitch_spawns"><a onclick="switchToSpawns()">SPAWNS</a></li>
+    </ul>
+    <div id="actualStore"></div>
+    <div id="spawns">
+      <button id="randomseedbutton">Random seed</button>
+      <button id="gosperbutton">Gospergun</button>
+      <button id="blinkerfarmbutton">Blinker farm</button>
+      <button id="pulsareggbutton">Pulsaregg</button>
+      <button id="tubbutton">Tub</button>
+      <button id="beaconbutton">Beacon</button>
+      <button id="loafbutton">Loaf</button>
+    </div>
+  </div>
+  <div id="console"></div>
+
+  <div id="menu">
+    <button id="startscreenbutton"></button>
+    <button id="gridbutton"></button>
+    <button id="achievementsbutton"></button>
+    <button id="cataloguebutton"></button>
+    <button id="locked1button"></button>
+    <button id="locked2button"></button>
+    <button id="locked3button"></button>
+    <button id="locked4button"></button>
+  </div>
+
+  <div id="gamebox">
+  </div>
+
+  <div id="bottombar">
+    <div id="datadiv">
+      <div id="datadivinside">
+        <p class="statistics">Amount of blocks:</p><p class="statvalues" id="blockamount"></p>
+        <p class="statistics">Living cells:</p><p class="statvalues" id="living"></p>
+        <p class="statistics">Dead cells:</p><p class="statvalues" id="dead"></p>
+
+        <br />
+        <p class="statistics">Generations:</p><p class="statvalues" id="generations"></p>
+        <p class="statistics">Died:</p><p class="statvalues" id="died"></p>
+        <p class="statistics">Born:</p><p class="statvalues" id="born"></p>
+        <p class="statistics">Births/gen:</p><p class="statvalues" id="birthrate"></p>
+
+      </div>
+      <div id="buttonbar">
+        <button id="playpausebutton" onclick="playpause()">Play</button>
+        <input type="range" min="1" max="40" id="slider">
+        <p class="statistics">Gen/s:</p><p class="statvalues" id="framerate"></p>
+      </div>
+    </div>
+
+    <div id="harvestdiv">
+      <button id="cleargridbutton">Harvest</button>
+      <p id="stemCelltext">StemCells: </p><p id="stemCells"></p>
+        <br /><br />
+      <button id="toggleslidebutton" onclick="changeStateInsertionSlide(this)">Activate Insertion Mode</button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

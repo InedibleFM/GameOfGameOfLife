@@ -1,0 +1,194 @@
+:root {
+  --bottom-bg-color: #D8DCE9; /* red: #ffe6cc; */
+  --bottom-bdr-color: #9B9EB9; /* redbrown: #AB998A */
+  --store-bg-color: #92C794;
+  --button-hover-color: #F4F9F1;
+  /* VERANDER OOK IN MENU.JS BOVENAAN: */
+  --menu-color: #F4F9F1; /* red: #FFE8E8 */
+  --menu-colorLine: #92C794; /* redline:  #FF7878;*/
+}
+
+html {
+  margin: 0 auto;
+}
+
+body {
+  margin: 0 auto;
+}
+
+#container {
+  position:absolute;
+  /* use entire browserwindow */
+  bottom:0;
+  left:0;
+  right:0;
+  top:0;
+  margin: 0 auto;
+  /* 1200×650 minimal window size */
+  min-width: 1200px;
+  min-height: 650px;
+}
+
+/* contains gamebox (menu and grid) and bottombar */
+#store {
+  position: absolute;
+  text-align: center;
+  bottom:140px;
+  top:0;
+  right:0;
+  width: 320px;   /* store width */
+  min-height: 510px;
+  background-color: var(--store-bg-color);
+  border-radius: 10px 0px 0px 10px;
+  z-index:0;
+}
+
+
+#spawns {
+  width:320px;
+  margin:auto;
+}
+
+#console {
+  position: absolute;
+  text-align: left;
+  bottom:0;
+  right:0;
+  width: 320px;   /* store width */
+  height: 140px;
+  padding-left:0;
+  background-color: black;
+  overflow-y:scroll;
+  border-radius: 10px 0px 0px 10px;
+}
+
+/* width */
+#console::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+#console::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+/* Handle */
+#console::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+#console::-webkit-scrollbar-thumb:hover {
+    background: #FFFFFF;
+}
+
+/* contains grid */
+#gamebox {
+  position:absolute;
+  left:70px; /* menu width */
+  top:0px;
+  right:320px;   /* store width */
+  bottom:140px;
+  overflow: scroll;
+}
+
+/* width */
+#gamebox::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+#gamebox::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #F5F5F5;
+}
+
+/* Handle */
+#gamebox::-webkit-scrollbar-thumb {
+    background: #B3DAA7;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+#gamebox::-webkit-scrollbar-thumb:hover {
+    background: #B3DAA7;
+}
+
+#menu {
+  position:absolute;
+  top:0;
+  left:0;
+  width: 70px; /* menu width */
+  min-height:510px; /* 650 - bottombar height = 510px*/
+  bottom:140px; /* bottombar height */
+  background-color: var(--menu-color);
+  box-shadow: inset -2px 2px 0px 0px var(--menu-colorLine);
+}
+
+#bottombar {
+  position:absolute;
+  bottom:0;
+  flex-end;
+  left:0px;
+  right:320px; /* store width */
+  height:140px; /* bottombar height */
+  min-width:880px; /* 1200 - store width = 880px*/
+  background-color: var(--menu-color);
+}
+
+#harvestdiv {
+  width: 30%;
+  float:right;
+  height:140px;
+  padding: 1em;
+  box-sizing:
+  border-box;
+  border-radius: 10px;
+  border-style:solid;
+  border-color: var(--bottom-bdr-color);
+  border-width: 3px 3px 3px 2px;
+  background-color: var(--bottom-bg-color);
+}
+
+#buttonbar {
+ height: 50px;
+ float:bottom;
+ padding: 0.3em;
+ box-sizing: border-box;
+ border-radius: 0px 0px 10px 10px;
+ border-style:solid;
+ border-color: var(--bottom-bdr-color);
+ border-width: 2px 1px 3px 3px;
+ background-color: var(--bottom-bg-color);
+}
+
+#datadiv { /* contains buttonbar and datadivinside (growth rates) */
+  width: 70%;
+  height:140px;
+  float:left;
+  box-sizing: border-box;
+}
+
+#datadivinside {
+  height: 90px;
+  float:top;
+  padding: 1em;
+  box-sizing:
+  border-box;
+  border-radius: 10px 10px 0px 0px;
+  border-style:solid;
+  border-color: var(--bottom-bdr-color);
+  border-width: 3px 1px 1px 3px;
+  background-color: var(--bottom-bg-color);
+}
+
+#storeMenuOverlayBorder {
+  position:absolute;
+  top:109px;
+  width:320px;
+  left:0;
+  height:31px;
+  z-index:-1;
+}

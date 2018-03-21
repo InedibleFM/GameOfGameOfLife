@@ -1,0 +1,120 @@
+button {
+  padding: 8px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 3px var(--bottom-bdr-color);
+  color: #53618C;
+}
+
+button:hover {background-color: var(--menu-color)}
+
+button:active {
+  /* background-color: #969696; */
+  /* box-shadow: 0 2px #666; */
+  transform: translateY(3px);
+  box-shadow: 0 2px #999;
+}
+
+button:focus {
+  outline:none;
+}
+
+#menu button {
+  /* background-color: #FFE8E8; */
+  background-color: var(--menu-color);
+  width:70px;
+  height:70px;
+  border-radius: 0px;
+  padding: 0px;
+  box-shadow: inset -2px 0px 0px 0px var(--menu-colorLine);
+  position: relative;
+  z-index: 0;
+}
+
+#startscreenbutton {
+  background: #cecece url("images/menuitems/startscreen.png") no-repeat right top;
+}
+
+#gridbutton {
+  background: #cecece url("images/menuitems/grid.png") no-repeat right top;
+}
+
+#achievementsbutton {
+  background: #cecece url("images/menuitems/achievements.png") no-repeat right top;
+}
+
+#cataloguebutton {
+  background: #cecece url("images/menuitems/catalogue.png") no-repeat right top;
+}
+
+#locked1button, #locked2button, #locked3button, #locked4button {
+  background: #cecece url("images/menuitems/lock.png") no-repeat right top;
+}
+
+/* #startscreenbutton:hover, #gridbutton:hover, #achievementsbutton:hover, #cataloguebutton:hover, #locked1button:hover, #locked2button:hover, #locked3button:hover, #locked4button:hover {
+  background-color: #e2e2e2;
+}
+
+#startscreenbutton:active, #gridbutton:active, #achievementsbutton:active, #cataloguebutton:active, #locked1button:active, #locked2button:active, #locked3button:active, #locked4button:active {
+  background-color: #969696;
+  box-shadow: 0 2px #666;
+  transform: translateY(0px);
+}
+
+#startscreenbutton:focus, #gridbutton:focus, #achievementsbutton:focus, #cataloguebutton:focus, #locked1button:focus, #locked2button:focus, #locked3button:focus, #locked4button:focus {
+    outline:none;
+} */
+
+#menu button:hover {
+  background-color: white;
+}
+
+#menu button:active {
+  transform: translateY(0px);
+}
+
+#menu button:focus {
+    outline:none;
+}
+
+/* STORE BUTTONS */
+#actualStore button {
+  font-weight: bold;
+  width:240px;
+  height:80px;
+  margin:10px;
+  padding:10px;
+  padding-top:4px;
+  white-space: normal;
+  background-color:#ffffff;
+  text-align:left;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  /* box-shadow: 0 3px rgba(0,0,0,0.35); */
+  opacity: 0.4;
+  color: #656F96;
+}
+
+#actualStore button:hover {background-color: var(--button-hover-color)}
+
+#actualStore button:active {
+  /* background-color: #969696; */
+  /* box-shadow: 0 2px #666; */
+  transform: translateY(3px);
+  box-shadow: 0 2px #999;
+}
+
+#actualStore button p {
+  margin:0;
+  padding:2px;
+}
+
+#spawns button {
+  margin: 10px;
+}
